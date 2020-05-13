@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-data-bouncer/static/css/main.42cc8b22.chunk.css",
+    "main.js": "/react-data-bouncer/static/js/main.0e5c8fbb.chunk.js",
+    "main.js.map": "/react-data-bouncer/static/js/main.0e5c8fbb.chunk.js.map",
+    "runtime-main.js": "/react-data-bouncer/static/js/runtime-main.8cd2f20c.js",
+    "runtime-main.js.map": "/react-data-bouncer/static/js/runtime-main.8cd2f20c.js.map",
+    "static/js/2.244389c0.chunk.js": "/react-data-bouncer/static/js/2.244389c0.chunk.js",
+    "static/js/2.244389c0.chunk.js.map": "/react-data-bouncer/static/js/2.244389c0.chunk.js.map",
+    "index.html": "/react-data-bouncer/index.html",
+    "precache-manifest.99f7d650037c1a7024fff92050bd435b.js": "/react-data-bouncer/precache-manifest.99f7d650037c1a7024fff92050bd435b.js",
+    "service-worker.js": "/react-data-bouncer/service-worker.js",
+    "static/css/main.42cc8b22.chunk.css.map": "/react-data-bouncer/static/css/main.42cc8b22.chunk.css.map",
+    "static/js/2.244389c0.chunk.js.LICENSE.txt": "/react-data-bouncer/static/js/2.244389c0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cd2f20c.js",
+    "static/js/2.244389c0.chunk.js",
+    "static/css/main.42cc8b22.chunk.css",
+    "static/js/main.0e5c8fbb.chunk.js"
+  ]
+}
