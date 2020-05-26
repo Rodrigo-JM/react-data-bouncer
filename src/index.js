@@ -10,9 +10,12 @@ export default class Bouncer extends React.Component {
 
   componentDidMount() {
     Object.keys(this.props).map((prop) => {
-      console.log(prop)
       if (typeof this.props[prop] === 'function') {
-        this.props[prop]()
+        if (this.props[`${prop}Args`]) {
+          this.props[prop](...this.props[`${prop}Args`])
+        } else {
+          this.props[prop]()
+        }
       }
     })
 

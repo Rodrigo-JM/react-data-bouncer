@@ -28,13 +28,23 @@ Steps:
 
  - Pass functions as props
 
+ - Pass arguments as an array (the name of the prop should be "function name" + "Args")
 
 ```jsx
 import React, { Component } from 'react'
-
+import ChildComp from './ChildComp'
 import Bouncer from 'react-data-bouncer'
 
-class Example extends Component {
+let theUser = {
+  id: 1,
+  name: 'Jeff',
+  age: 17,
+  purchases: []
+}
+
+let purchases = ['1', '2']
+
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
@@ -44,7 +54,9 @@ class Example extends Component {
     this.setUser = this.setUser.bind(this)
   }
 
-  setUser(){
+  setUser(dummyuser, purchases){
+    dummyuser.purchases = purchases
+
     this.setState({
       user: dummyuser
     })
@@ -53,21 +65,17 @@ class Example extends Component {
   render() {
     return (
       <div>
-        //Pass functions you want to be called before Bouncer's children get rendered/mounted
-        <Bouncer setUser={this.setUser} >
-
-          //ChildComp will only render after setUser function gets called
+      //Pass functions you want to be called before Bouncer's children get rendered/mounted
+      //If you want your function to be called with arguments, pass an array with the arguments as "function name" + "Args" 
+        <Bouncer setUser={this.setUser} setUserArgs={[theUser, purchases]}>
           <ChildComp user={this.state.user}/>
         </Bouncer>
       </div>
     )
   }
 }
+
 ```
-
-## Next Steps
-
- - Allowing arguments to be passed down
 
 ## License
 

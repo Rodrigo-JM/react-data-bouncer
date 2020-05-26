@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import ChildComp from './ChildComp'
 import Bouncer from 'react-data-bouncer'
 
-let dummyuser = {
+let theUser = {
   id: 1,
   name: 'Jeff',
   age: 17,
+  purchases: []
 }
+
+let purchases = ['1', '2']
 
 export default class App extends Component {
   constructor() {
@@ -18,12 +21,9 @@ export default class App extends Component {
     this.setUser = this.setUser.bind(this)
   }
 
-  componentDidMount() {
-    this.setState({user: dummyuser})
-  }
+  setUser(dummyuser, purchases){
+    dummyuser.purchases = purchases
 
-
-  setUser(){
     this.setState({
       user: dummyuser
     })
@@ -32,7 +32,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Bouncer setUser={this.setUser} >
+        <Bouncer setUser={this.setUser} setUserArgs={[theUser, purchases]}>
           <ChildComp user={this.state.user}/>
         </Bouncer>
       </div>
